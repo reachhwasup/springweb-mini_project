@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+</head>
+<body>
+<!--right article-->
+<div th:fragment="article" class="card bg-light mt-3" style="width: 28rem;">
+  <img src="https://logovectordl.com/wp-content/uploads/2021/03/article-logo-vector.png" class="card-img-top" alt="article">
+  <div class="card-body">
+    <h3 class="card-title">Reach Articles</h3>
+    <p class="card-text">Free posting and sharing any article with insane freedom</p>
+  </div>
+    <div class="list-group list-group-white mt-2">
+        <div class="card border-0 shadow-1">
+            <h5 class="card-header">Popular Categories</h5>
+            <div class="card-body">
+                <div class="bg-image hover-overlay ripple shadow-0-strong rounded" data-ripple-color="light">
+                    <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                        <div class="mask" style="background-color: rgba(159,150,150,0.2);"></div>
+                    </a>
+                </div>
+                <div th:each="category : ${allCategories}">
+                    <a href="#" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2
+                    list-group-item-whitesmoke"
+                      th:text="${category.cateName}" >Footballer</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

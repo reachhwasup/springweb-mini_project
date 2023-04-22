@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>card</title>
+    <link rel="stylesheet" th:href="@{/css/card.css}">
+</head>
+<body>
+<!--left article-->
+<figure th:fragment="card" th:each=" author :${allAuthors}" class="snip1336 mt-3" style="max-width: 480px;">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.lAikLpNp7a0J03O8WMUdKwHaEK?pid=ImgDet&rs=1" alt="sample87" />
+    <figcaption  >
+        <div class="d-flex" >
+            <div>
+                <img src="https://www.canyon-news.com/wp-content/uploads/2019/05/John-Wick.jpg" alt="profile-sample4" class="profile" />
+            </div>
+                <h5>John Wick</h5>
+                <p class="ms-3 mt-1 text-warning" style="">@john_wick</p>
+        </div>
+
+        <h2>
+            <span class="mb-2">Hunter</span>John Wick Chapter 4</h2>
+        <p>John Wick Chapter 4 is here — and so is our John Wick Chapter 4 review!</p>
+        <div class="view"><a href="#" class="follow" >View</a></div>
+        <a href="#" class="info">Update</a>
+        <a href="#" class="info">Delete</a>
+    </figcaption>
+</figure>
+
+</body>
+</html>

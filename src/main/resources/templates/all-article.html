@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html   lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/card.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap.min.css" integrity="sha512-N415hCJJdJx+1UBfULt+i+ihvOn42V/kOjOpp1UTh4CZ70Hx5bDlKryWaqEKfY/8EYOu/C2MuyaluJryK1Lb5Q==" crossorigin="anonymous" />
+
+
+    <style>
+        .article-img img {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div th:insert="fragments/navbar::navbar"></div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div th:each=" author :${allAuthors}"  class="card" style="width: 18rem;">
+                <img src="" th:src="${author.profileURL}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${author.name}"></h5>
+                    <h6 class="card-text text-warning" th:text="${author.username}"></h6>
+
+                    <p class="card-text" th:text="${author.bio}"></p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.min.js" integrity="sha512-mp3VeMpuFKbgxm/XMUU4QQUcJX4AZfV5esgX72JQr7H7zWusV6lLP1S78wZnX2z9dwvywil1VHkHZAqfGOW7Nw==" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
