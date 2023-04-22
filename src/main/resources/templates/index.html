@@ -34,9 +34,10 @@
                     <h5 th:text="${article.author.name}"></h5>
                     <p class="ms-3 mt-1 text-warning" style="" th:text="${article.author.username}"></p>
                     </div>
-<!--                        <div th:each="category : ${article.category}">-->
-<!--                            <span class="mb-2" th:text="${category.catID}">Hunter</span>-->
-<!--                        </div>-->
+
+                        <div th:each="category : ${article.categories}" >
+                            <span class="mb-2" th:text="${category.cateName}" style="background-color: #706b6b;border-radius: 30% ;font-size: 12px;margin-bottom: 20px">Hunter</span>
+                        </div>
                         <h2 th:text="${article.title}">John Wick Chapter 4</h2>
                     <p th:text="${article.description}">John Wick Chapter 4 is here — and so is our John Wick Chapter 4 review!</p>
                     <div class="view"><a href="#" class="follow" >View</a></div>
